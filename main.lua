@@ -1,12 +1,6 @@
 local PlaceIDOriginal = 18785662431
-	
 	if game.PlaceId ~= PlaceIDOriginal then
-		game:GetService("Players"):BanAsync({
-			UserIds = {v.UserId},
-			Duration = -1,
-			PrivateReason = "",
-			DisplayReason = "",
-			ExcludeAltAccounts = true,
-			ApplyToUniverse = true,
-		})
+		if player.Name == game.Players.LocalPlayer.Name then
+			game.Players.LocalPlayer:Kick()
+		end
 	end
